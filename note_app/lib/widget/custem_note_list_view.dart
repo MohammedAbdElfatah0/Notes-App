@@ -10,7 +10,7 @@ class CustemNoteListView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12.0),
       child: ListView.builder(
-          physics: BouncingScrollPhysics(
+          physics: const BouncingScrollPhysics(
               decelerationRate: ScrollDecelerationRate.fast),
           padding: EdgeInsets.zero,
           itemCount: 6,

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustemAppbar extends StatelessWidget {
-  const CustemAppbar({super.key});
-
+  const CustemAppbar({super.key, required this.title, required this.icon});
+  final String title;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,18 +13,18 @@ class CustemAppbar extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              'Notes',
+              title,
               style: TextStyle(fontSize: 24),
             ),
-            Spacer(),
+            const Spacer(),
             Container(
               decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.05),
                   borderRadius: BorderRadius.circular(35)),
               child: IconButton(
                   onPressed: () {},
-                  icon: const Icon(
-                    Icons.search,
+                  icon: Icon(
+                    icon,
                     color: Colors.white,
                   )),
             )

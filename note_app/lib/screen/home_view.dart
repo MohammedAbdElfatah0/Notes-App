@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:note_app/widget/add_note.dart';
 import 'package:note_app/widget/custem_app_bar.dart';
 import 'package:note_app/widget/custem_note_list_view.dart';
@@ -13,7 +12,7 @@ class HomeView extends StatelessWidget {
         bottom: true,
         child: Scaffold(
           floatingActionButton: FloatingActionButton(
-            shape: CircleBorder(
+            shape: const CircleBorder(
               side: BorderSide(color: Colors.white),
             ),
             backgroundColor: Colors.grey.shade600,
@@ -27,14 +26,17 @@ class HomeView extends StatelessWidget {
                   )),
                   context: context,
                   builder: (context) {
-                    return AddNoteFromBottemSheet();
+                    return const AddNoteFromBottemSheet();
                   });
             },
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
           body: const Column(
             children: [
-              CustemAppbar(),
+              CustemAppbar(
+                icon: Icons.search,
+                title: 'Notes',
+              ),
               SizedBox(
                 height: 10,
               ),
