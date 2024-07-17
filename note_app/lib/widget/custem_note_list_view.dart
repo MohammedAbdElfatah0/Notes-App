@@ -16,7 +16,7 @@ class CustemNoteListView extends StatelessWidget {
           itemCount: 6,
           itemBuilder: (context, index) {
             return const Padding(
-              padding: EdgeInsets.symmetric(vertical: 8.0),
+              padding: EdgeInsets.only(bottom: 8.0),
               child: ItemNotes(),
             );
           }),

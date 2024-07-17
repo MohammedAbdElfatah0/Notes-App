@@ -8,6 +8,7 @@ class CustemAppbar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Container(
+        height: 40,
         child: Row(
           children: [
             Text(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:note_app/widget/add_note.dart';
 import 'package:note_app/widget/custem_app_bar.dart';
 import 'package:note_app/widget/custem_note_list_view.dart';
@@ -19,6 +20,11 @@ class HomeView extends StatelessWidget {
             foregroundColor: Colors.greenAccent,
             onPressed: () {
               showModalBottomSheet(
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(34),
+                    topRight: Radius.circular(34),
+                  )),
                   context: context,
                   builder: (context) {
                     return AddNoteFromBottemSheet();
@@ -26,7 +32,7 @@ class HomeView extends StatelessWidget {
             },
             child: Icon(Icons.add),
           ),
-          body: Column(
+          body: const Column(
             children: [
               CustemAppbar(),
               SizedBox(
