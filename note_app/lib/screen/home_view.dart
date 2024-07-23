@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/widget/add_note.dart';
-import 'package:note_app/widget/custem_app_bar.dart';
-import 'package:note_app/widget/custem_note_list_view.dart';
+import 'package:note_app/widget/note_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -11,6 +10,7 @@ class HomeView extends StatelessWidget {
     return SafeArea(
         bottom: true,
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           floatingActionButton: FloatingActionButton(
             shape: const CircleBorder(
               side: BorderSide(color: Colors.white),
@@ -19,6 +19,7 @@ class HomeView extends StatelessWidget {
             foregroundColor: Colors.greenAccent,
             onPressed: () {
               showModalBottomSheet(
+                  isScrollControlled: true,
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(34),
@@ -31,18 +32,7 @@ class HomeView extends StatelessWidget {
             },
             child: const Icon(Icons.add),
           ),
-          body: const Column(
-            children: [
-              CustemAppbar(
-                icon: Icons.search,
-                title: 'Notes',
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Expanded(child: CustemNoteListView()),
-            ],
-          ),
+          body: const NoteListView(),
         ));
   }
 }
