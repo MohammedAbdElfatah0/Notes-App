@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/cubits/note_cubit/note_cubit.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/screen/edit_view.dart';
-import 'package:note_app/widget/edit_notes_view_body.dart';
 
 class ItemNotes extends StatelessWidget {
   const ItemNotes({super.key, required this.note});
@@ -14,7 +13,9 @@ class ItemNotes extends StatelessWidget {
     return GestureDetector(
       onLongPress: () {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return  EditView(note: note,);
+          return EditView(
+            note: note,
+          );
         }));
       },
       child: Container(

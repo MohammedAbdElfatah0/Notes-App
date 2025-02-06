@@ -1,13 +1,8 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app/constants.dart';
-import 'package:note_app/cubits/add_note_cubit.dart';
 import 'package:note_app/cubits/note_cubit/note_cubit.dart';
 import 'package:note_app/models/note_model.dart';
-import 'package:note_app/widget/color_cricle.dart';
 import 'package:note_app/widget/color_edit.dart';
-import 'package:note_app/widget/color_list_view.dart';
 import 'package:note_app/widget/custem_app_bar.dart';
 import 'package:note_app/widget/custem_text_form_field.dart';
 
