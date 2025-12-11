@@ -26,7 +26,6 @@ class _NoteListViewState extends State<NoteListView> {
     return const Column(
       children: [
         CustemAppbar(
-          icon: Icons.search,
           title: 'Notes',
         ),
         SizedBox(

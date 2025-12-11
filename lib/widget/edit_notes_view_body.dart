@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app/cubits/note_cubit/note_cubit.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/widget/color_edit.dart';
 import 'package:note_app/widget/custem_app_bar.dart';
@@ -26,14 +24,6 @@ class _EditNotesViewState extends State<EditNotesView> {
             child: Column(
               children: [
                 CustemAppbar(
-                  onPressed: () {
-                    widget.note.title = title ?? widget.note.title;
-                    widget.note.subTitle = content ?? widget.note.subTitle;
-                    widget.note.save();
-                    BlocProvider.of<NoteCubit>(context).fetchAllNote();
-                    Navigator.pop(context);
-                  },
-                  icon: Icons.done,
                   title: 'Edit Note',
                 ),
                 CustemTextField(
